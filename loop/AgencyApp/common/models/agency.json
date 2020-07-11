@@ -1,0 +1,93 @@
+{
+  "name": "Agency",
+  "plural": "Agency",
+  "base": "BaseModel",
+  "mysql": {
+    "tableName": "agency"
+  },
+  "mixins": {
+    "TimeStamp": {}
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "INT",
+        "dataLength": 6,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "address1": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "address1",
+        "dataType": "VARCHAR",
+        "dataLength": 500,
+        "nullable": "N"
+      }
+    },
+    "address2": {
+      "type": "String",
+      "required": false,
+      "mysql": {
+        "columnName": "address2",
+        "dataType": "VARCHAR",
+        "dataLength": 500,
+        "nullable": "N"
+      }
+    },
+    "state": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "state",
+        "dataType": "VARCHAR",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "city": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "city",
+        "dataType": "VARCHAR",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "phoneNumber": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "phone_number",
+        "dataType": "VARCHAR",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "client": {
+      "type": "hasOne",
+      "model": "Client",
+      "foreignKey": "fk_id_agency"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

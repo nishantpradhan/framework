@@ -1,0 +1,48 @@
+{
+  "name": "AppUser",
+  "plural": "AppUser",
+  "base": "BaseModel",
+  "mysql": {
+    "tableName": "user"
+  },
+  "mixins": {
+    "TimeStamp": {}
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "INT",
+        "dataLength": 6,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "password": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "password",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "foreignKeys": {},
+  "acls": [],
+  "methods": {}
+}

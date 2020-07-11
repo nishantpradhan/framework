@@ -1,0 +1,51 @@
+{
+  "name": "BaseModel",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true
+    },
+    "isActive": {
+      "type": "Boolean",
+      "required": true,
+      "default": true
+    },
+    "createdDate": {
+      "type": "Date",
+      "required": true,
+      "ignoreAuditLog": true,
+      "mysql": {
+        "columnName": "created_date",
+        "dataType": "DATETIME",
+        "nullable": "N"
+      }
+    },
+    "lastModifiedDate": {
+      "type": "Date",
+      "required": true,
+      "ignoreAuditLog": true,
+      "mysql": {
+        "columnName": "last_modified_date",
+        "dataType": "DATETIME",
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "*"
+    }
+  ],
+  "methods": {}
+}

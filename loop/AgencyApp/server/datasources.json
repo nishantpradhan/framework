@@ -1,0 +1,21 @@
+{
+  "mysqlTransactional": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "test",
+    "password": "root",
+    "name": "mysqlTransactional",
+    "connectionLimit": 10,
+    "user": "root",
+    "connector": "mysql",
+    "debug": false,
+    "connectTimeout": 300000,
+    "acquireTimeout": 300000
+  },
+  "memory": {
+    "name": "memory",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
+  }
+}

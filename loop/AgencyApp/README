@@ -1,0 +1,7 @@
+
+# App is based on NodeJS loopback frameWork
+# Node version used v8.9.0
+# DataBase Mysql@5.7
+# Creata Schema with name "test" in Mysql
+# Run userDump_2020-07-11.sql 
+#run app using node server/server.js from app root folder.

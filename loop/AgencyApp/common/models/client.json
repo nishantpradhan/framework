@@ -1,0 +1,82 @@
+{
+  "name": "Client",
+  "plural": "Clients",
+  "base": "BaseModel",
+  "mysql": {
+    "tableName": "client"
+  },
+  "mixins": {
+    "TimeStamp": {}
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "INT",
+        "dataLength": 6,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "email": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "email",
+        "dataType": "VARCHAR",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "phoneNumber": {
+      "type": "String",
+      "required": true,
+      "mysql": {
+        "columnName": "phone_number",
+        "dataType": "VARCHAR",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "totalBill": {
+      "type": "Number",
+      "required": true,
+      "mysql": {
+        "columnName": "total_bill",
+        "dataType": "DECIMAL",
+        "nullable": "N",
+        "dataPrecision": 25,
+        "dataScale": 10
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "agency": {
+      "type": "belongsTo",
+      "model": "Agency",
+      "foreignKey": "fk_id_agency"
+    }
+  },
+  "foreignKeys": {
+    "fkidx_client_agency_fk_id_agency": {
+      "name": "fkidx_client_agency_fk_id_agency",
+      "foreignKey": "fk_id_agency",
+      "entityKey": "id",
+      "entity": "Agency"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
